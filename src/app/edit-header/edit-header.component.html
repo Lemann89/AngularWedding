@@ -1,0 +1,43 @@
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Edit header</button>
+
+ 
+<ng-template #template>
+  <div class="modal-lg">
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Edit</h4>
+      <button type="button" class="close pull-right"  (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form class="modal-body" [formGroup]="form" (ngSubmit)="submit()" >
+      <div class="m-2" formGroupName="meta">
+          <h5 class="pull-left">Title</h5>
+          <input class="form-control" type="text" formControlName="title">
+      </div>
+      <div class="m-2">
+          <h5 class="pull-left">Navigation</h5>
+          <div class="mt-2" formArrayName="content" *ngFor="let item of model.content; let idx = index">
+            <div [formGroupName]="idx">
+              <input class="form-control mt-2" type="text" formControlName="title">
+              <input class="form-control mt-2" type="text" formControlName="url">
+            </div>
+          </div>
+      </div>
+      <div class="m-2" formGroupName="action">
+        <h5 class="pull-left">Button</h5>
+        <input class="form-control mt-2" type="text" formControlName="title">
+        <input class="form-control mt-2" type="text" formControlName="url">
+      </div>
+      <div class="m-2 mt-4">
+          <button
+            type="submit"
+            class="btn btn-success" 
+          >
+            Submit 
+          </button>
+          <button type="button" class="btn btn-danger ml-2" (click)="modalRef.hide()"> Закрыть </button>
+      </div>
+    </form>
+    </div>
+  </ng-template>
+  

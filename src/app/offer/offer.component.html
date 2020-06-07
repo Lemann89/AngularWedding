@@ -1,0 +1,16 @@
+<section class="offer" *ngIf="model">
+    <div class="container">
+        <p class="offer__title " > {{ model.title }} </p>
+        <p class="offer__subtitle " >
+            {{ model.description }}
+        </p>
+        <div class="offer__advantages">
+            <div class="offer__item " *ngFor="let item of offersItemsArray" >
+                <i class="icon {{ item.iconClass }} "  ></i>
+                <p class="offer__item-subtitle">
+                    {{ item.subtitle }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

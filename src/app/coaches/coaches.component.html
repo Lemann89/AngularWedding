@@ -1,0 +1,44 @@
+<section class="coaches" *ngIf="model">
+    <div class="container">
+        <p class="coaches__title " > {{ model.meta.title }} </p>
+        <p class="coaches__subtitle " >
+            {{ model.meta.description }}
+        </p>
+        <div class="coaches__cards">
+            <div class="coaches__card " *ngFor="let item of model.content">
+                <div class="coaches__card-img">
+                    <img src="../../assets/img/coaches-1.jpg" alt="coaches"> 
+                </div>
+                <div class="coaches__card-content">
+                    <span class="coaches__card-number"> 01 </span>
+                    <p class="coaches__card-title"> {{ item.name }} </p>
+                    <p class="coaches__card-subtitle"> {{ item.direction }} </p>
+                    <ul class="coaches__card-list">
+                        <li class="coaches__card-item">
+                            <span class="coaches__card-exp">
+                                Work experience
+                            </span>
+                            {{ item.workExperience }} years
+                        </li>
+                        <li class="coaches__card-item">
+                            <span class="coaches__card-exp">
+                                Teacher
+                            </span>
+                            for {{ item.teachExperience }} years
+                        </li>
+                        <li class="coaches__card-item">
+                            <span class="coaches__card-exp">
+                                Style
+                            </span>
+                            {{ item.style }}
+                        </li>
+                    </ul>
+                    <button class="start-btn start-btn--coach">Let's start</button>
+                    <button class="coaches__mobile-btn">
+                        <img src="../../assets/img/coaches-slide.svg" alt="/coaches-slide">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

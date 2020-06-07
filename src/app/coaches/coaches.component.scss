@@ -1,0 +1,177 @@
+$black: #000;
+$white: #fff;
+$pink: #FF699F;
+$dark: #1F1F1F;
+
+.start-btn {
+    margin-top: 40px;
+    height: 46px;
+    width: 161px;
+    color: $pink;
+    background-color: transparent;
+    border: 2px solid $pink;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    &--coach {
+        margin-top: 50%;
+    }
+}
+.coaches {
+    margin-top: 100px;
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__subtitle {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 668px;
+        line-height: normal;
+    }
+    &__cards {
+        position: relative;
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__card {
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
+        border-radius: 2px;
+        margin: 10px 8px;
+        display: flex !important;
+        width: 47%;
+        &-content {
+            padding: 43px 0px;
+            margin-left: 24px;
+        }
+        &-number {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        &-title {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-subtitle {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        &-list {
+            margin-top: 24px;
+            list-style: none;
+            padding: 0px;
+        }
+        &-item {
+            margin-bottom: 16px;
+        }
+        &-exp {
+            opacity: 0.5;
+        }
+        &-btn {
+            margin-top: 88px;
+            height: 46px;
+            width: 161px;
+            color: $pink;
+            background-color: transparent;
+            border: 2px solid $pink;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+    }
+    &__card-img {
+        & img {
+            width: 100%;
+        }
+    }
+    &__mobile {
+        &-btn {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid $pink;
+            margin-left: 80%;
+            & img {
+                width: 15px !important;
+                height: 15px;
+            }
+            @media only screen and (min-width: 551px) {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 1100px){
+    .container {
+        padding: 0px 32px;
+    }
+    .coaches {
+        &__count {
+            display: none;
+        }
+    }
+    
+}
+
+@media (max-width : 992px){
+    .container{
+        max-width: 1100px;
+        padding: 0px 36px 0px 36px;
+    }
+    .coaches {
+        &__cards {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__card {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width : 768px){
+    .container{
+        max-width: 992px;
+        padding: 0px 16px;
+    }
+    .coaches {
+        margin-top: 56px;
+        &__title{
+            font-size: 36px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 23px;
+        }
+        &__cards{
+            margin: 8px -16px;
+        }
+    }
+}
+
+@media (max-width : 550px){
+    .coaches{
+        &__card {
+            display: block !important;
+            width: 75%;
+        }
+        &__card img {
+            width: 100%;
+        }
+    }
+    .start-btn{
+        &--coach {
+            display: none;
+        }
+    }
+}

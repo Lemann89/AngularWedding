@@ -1,0 +1,8 @@
+input{
+    &.ng-invalid.ng-touched {
+        border: 1px solid #DC3545;
+    }
+    &.ng-valid.ng-touched{
+        border: 1px solid #28A745;
+    }
+}

@@ -1,0 +1,20 @@
+<section class="services" *ngIf="model" >
+    <div class="container">
+        <p class="services__title " > {{ model.title }} </p>
+        <p class="services__subtitle " > {{ model.description }} </p>
+        <div class="services__cards">
+            <div class="services__card " 
+            *ngFor="let item of servicesCardArray" >
+                <img class="services__card-img" [src]=" item.img " alt="services-1">
+                <div class="services__card-content">
+                    <div class="services__card-title">
+                        {{ item.title }}
+                    </div>
+                    <ul class="services__card-list">
+                        <li class="services__card-item" *ngFor=" let itemList of item.list "> {{ itemList }} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

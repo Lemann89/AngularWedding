@@ -1,0 +1,58 @@
+$black: #000;
+$white: #fff;
+$pink: #FF699F;
+$dark: #1F1F1F;
+
+.footer {
+    margin-top: 100px;
+    background-color: $dark;
+    &__flex {
+        height: 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &__copyright {
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px){
+    .container {
+        padding: 0px 32px;
+    }
+    
+}
+
+@media (max-width : 992px){
+    .container{
+        max-width: 1100px;
+        padding: 0px 36px 0px 36px;
+    }
+    
+}
+
+@media (max-width : 768px){
+    .container{
+        max-width: 992px;
+        padding: 0px 16px;
+    }
+    .footer {
+        margin-top: 56px;
+        &__logo{
+            font-size: 14px;
+        }
+        &__copyright{
+            font-size: 14px;
+        }
+    }
+    
+}

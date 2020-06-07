@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "wedding";
+	src: url('assets/iconfonts/wedding.eot');
+	src: url('assets/iconfonts/wedding.eot?#iefix') format('eot'),
+		url('assets/iconfonts/wedding.woff2') format('woff2'),
+		url('assets/iconfonts/wedding.woff') format('woff'),
+		url('assets/iconfonts/wedding.ttf') format('truetype'),
+		url('assets/iconfonts/wedding.svg#wedding') format('svg');
+}
+
+.icon:before {
+	font-family: "wedding";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-body::before {
+	content: "\ea01";
+  }
+  
+  .icon-card::before {
+	content: "\ea02";
+  }
+  
+  .icon-cup::before {
+	content: "\ea03";
+  }
+  
+  .icon-door::before {
+	content: "\ea04";
+  }
+  
+  .icon-friends::before {
+	content: "\ea05";
+  }
+  
+  .icon-group::before {
+	content: "\ea06";
+  }
+  
+  .icon-smile::before {
+	content: "\ea07";
+  }
+  
+  .icon-star::before {
+	content: "\ea08";
+  }

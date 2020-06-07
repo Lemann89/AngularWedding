@@ -1,0 +1,14 @@
+<ng-container *ngIf="loading">
+    <app-loader></app-loader>
+</ng-container>
+<ng-container *ngIf="!loading">
+    <app-auth-modal *ngIf="!token"></app-auth-modal>
+    <app-logout *ngIf="token"></app-logout>
+    <app-edit-header *ngIf="token"></app-edit-header>
+    <app-header></app-header>
+    <app-first-section></app-first-section>
+    <app-our-services></app-our-services>
+    <app-offer></app-offer>
+    <app-coaches></app-coaches>
+    <app-footer></app-footer>
+</ng-container>

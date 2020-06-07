@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-success" (click)="openModal(template)">Auth</button>
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Авторизация</h4>
+    <button type="button" class="close pull-right"  (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form class="modal-body" [formGroup]="form" (ngSubmit)="submit()" >
+    <alert type="danger m-2" *ngIf="authError">
+      <strong>Ошибка!</strong> Неверный пароль или email
+    </alert>
+    <div class="m-2">
+        <input class="form-control" type="text" placeholder="E-mail" formControlName="email">
+    </div>
+    <div class="m-2">
+        <input class="form-control" type="password" placeholder="Пароль" formControlName="password">
+    </div>
+    <div class="m-2 mt-2">
+        <button
+          type="submit" 
+          class="btn btn-success" 
+          [disabled]="form.invalid"
+          >
+          Войти 
+        </button>
+        <button type="button" class="btn btn-danger ml-2" (click)="modalRef.hide()"> Закрыть </button>
+    </div>
+  </form>
+</ng-template>

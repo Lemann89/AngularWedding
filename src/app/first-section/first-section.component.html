@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="lesson" *ngIf="model">
+        <div class="lesson__content" >
+            <h1 class="lesson__content-title" >
+                {{ model.title }}
+            </h1>
+            <h2 class="lesson__content-subtitle " > {{ model.location }} </h2>
+            <p class="lesson__content-text "  >
+                {{ model.description }}
+            </p>
+            <button class="start-btn start-btn--lesson " >
+                Let’s start
+            </button>
+        </div>
+        <div class="lesson__bg ">
+            <img [src]="imgUrl + model.heroImage" alt="background">
+        </div>
+    </div>
+</div>

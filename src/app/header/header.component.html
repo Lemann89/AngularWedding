@@ -1,0 +1,35 @@
+<div class="container">
+    <div 
+        class="nav-container"
+        *ngIf="model"
+    >
+        <a href="#" class="logo">
+            {{ model.meta.title }}
+        </a>
+        <nav class="nav" [ngClass]="{'nav__active' : status}">
+            <div class="nav__menu">
+                <h3 class="nav__menu-heading">Menu</h3>
+                <ul class="nav__menu__list">
+                    <li class="nav__menu__list-item" 
+                        *ngFor="let items of model.content">
+                        <a [href]="items.url"> 
+                            {{ items.title }} 
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav__menu-button">
+                   {{ model.action.title }}
+                </button>
+                <button class="start-btn start-btn--nav">
+                    Let’s start
+                </button>
+                <span class="nav__menu-line"></span>
+            </div>
+        </nav>
+        <div class="burger"
+            (click)="toggleMenu()" 
+            >
+            <span class="burger-menu" [ngClass]="{'burger-menu-active' : status}"></span>
+        </div>
+    </div>
+</div>
